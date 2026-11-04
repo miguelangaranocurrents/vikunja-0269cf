@@ -355,7 +355,9 @@ const DRAG_OPTIONS = {
 	delayOnTouchOnly: true,
 	delay: 1000,
 	// px from a scroll container's edge at which dragging starts auto-scrolling; sortable's default (30) is too narrow to reach the off-screen buckets
-	scrollSensitivity: 400,
+	scrollSensitivity: 80,
+	// native drag does not autoscroll the board on its own, so sortable has to do it
+	forceAutoScrollFallback: true,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
