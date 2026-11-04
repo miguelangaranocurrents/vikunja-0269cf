@@ -356,7 +356,7 @@ const DRAG_OPTIONS = {
 	delay: 1000,
 	// px from a scroll container's edge at which dragging starts auto-scrolling; sortable's default (30) is too narrow to reach the off-screen buckets
 	scrollSensitivity: 80,
-	// native drag does not autoscroll the board on its own, so sortable has to do it
+	// use sortable's own autoscroll during native drag too, so dragging to a bucket off screen scrolls the board
 	forceAutoScrollFallback: true,
 } as const
 
