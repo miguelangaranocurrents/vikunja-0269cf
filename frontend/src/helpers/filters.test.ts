@@ -595,4 +595,10 @@ describe('hasFilterQuery', () => {
 		expect(hasFilterQuery('done = false')).toBe(true)
 		expect(hasFilterQuery('hello')).toBe(false)
 	})
+
+	it('does not treat plain search text containing an operator word as a filter', () => {
+		expect(hasFilterQuery('meeting')).toBe(false)
+		expect(hasFilterQuery('internal notes')).toBe(false)
+		expect(hasFilterQuery('labels in 1, 2')).toBe(true)
+	})
 })
